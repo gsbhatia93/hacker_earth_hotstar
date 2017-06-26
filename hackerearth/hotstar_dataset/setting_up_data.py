@@ -94,6 +94,7 @@ def get_titles_time(p):
              sum=sum+s[i];
     #         print sum;
      return sum;
+ df['titles_sum'] = df['titles'].map(get_titles_time);
 
 def get_days(p):
      return len(p);
