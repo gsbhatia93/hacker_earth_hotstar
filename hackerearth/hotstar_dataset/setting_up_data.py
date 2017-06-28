@@ -88,7 +88,7 @@ def get_titles_time(p):
              sum=sum+s[i];
     #         print sum;
      return sum;
- df['titles_sum'] = df['titles'].map(get_titles_time);
+ df['title_sum'] = df['titles'].map(get_titles_time);
 
 def get_days(p):
      return len(p);
@@ -96,3 +96,12 @@ df['no_of_days']=df['dow_list'].map(get_days)
 df._get_numeric_data()
 del train['segment']
 train.drop('segment',axis=1, inplace=True)
+
+>>> x_train,x_test,y_train,y_test = train_test_split(x,target,test_size=0.3,random_state=0)
+
+neg_corr=[]
+pos_corr=[]
+for i in range(len(correlation)):
+        if(correlation[i]>=0.08):
+                pos_corr.append(i);
+best_corr.remove(0)

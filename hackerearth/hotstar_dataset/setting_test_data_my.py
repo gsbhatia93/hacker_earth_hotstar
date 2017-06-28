@@ -17,5 +17,5 @@ for x in g:
 #get time function
 dftest['tod_sum'] = dftest['tod'].map(get_time);
 
-dftest['titles_sum'] = dftest['titles'].map(get_titles_time);
+dftest['title_sum'] = dftest['titles'].map(get_titles_time);
 dftest['no_of_days']=dftest['dow_list'].map(get_days)

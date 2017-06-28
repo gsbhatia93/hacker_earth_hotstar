@@ -2,7 +2,7 @@ import json
 import numpy as np
 import pandas as pd
 import re
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 train_data = pd.read_json('train_data.json',orient="index")
@@ -156,4 +156,9 @@ rf_model = RandomForestClassifier(n_estimators=500,max_depth=12, max_features=10
 rf_model.fit(train_data, target)
 
 rf_pred = rf_model.predict_proba(test_data)
-print rf_pred
+#print rf_pred
+columns = ['segment']
+sub = pd.DataFrame(data=rf_pred[:,1], columns=columns)
+sub['ID'] = test_id
+sub = sub[['ID','segment']]
+sub.to_csv("sub_hot.csv", index=False)
