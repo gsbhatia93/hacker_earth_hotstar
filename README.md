@@ -1,6 +1,2 @@
-# hacker_earth_hotstar
-hackerearth problem one - hot star customer classification
-This contains starter code for HackerEarth Hotstar Problem: 
-1.processing the data 
-2.getting sum of titles 
-3.dow sum,tod total
+# hacker_earth_hotstar_machine_learning
+hackerearth ml challenge problem #1 hotstar.Creating prediction model using text manipulation of input, cross validation of data and  random forest.
